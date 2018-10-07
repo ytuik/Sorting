@@ -1,9 +1,22 @@
+/**
+ * @author ytuik
+ *
+ */
+public class BubbleSort {
 
-public class bubblesort {
+	protected static void bubbleSort(int[] list) {
+		int temp = 0;
+		for (int i = 0; i < list.length; i++) {
+			for (int j = 1; j < list.length - i; j++) {
+				if (list[j - 1] > list[j]) {
+					//fast swap between list[j] and list[j-1]
+					list[j - 1] ^= list[j];
+					list[j] ^= list[j-1];
+					list[j - 1] ^= list[j];
+				}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+			}
 
+		}
 	}
-
-}
+	
